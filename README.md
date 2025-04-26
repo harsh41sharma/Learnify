@@ -87,5 +87,5 @@ See the [LICENSE](LICENSE) file for full details.
 ## 👨‍💻 Developed By
 
 **Harsh Sharma**  
-Aspiring Full Stack Developer | Entrepreneur in the Making 🚀  
+Aspiring Full Stack Developer 
 [LinkedIn](https://www.linkedin.com/in/harsh41sharma) • [GitHub](https://github.com/harsh41sharma)
