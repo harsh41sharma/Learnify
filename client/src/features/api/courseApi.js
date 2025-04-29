@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const COURSE_API = "http://localhost:8080/api/course";
+const COURSE_API = "https://learnify-uy89.onrender.com/api/course";
 
 export const courseApi = createApi({
   reducerPath: "courseApi",
@@ -65,7 +65,7 @@ export const courseApi = createApi({
       }),
       invalidatesTags: ["Refetch_Creator_Course"],
     }),
-    getCourseyId: builder.query({
+    getCourseById: builder.query({
       query: (courseId) => ({
         url: `/${courseId}`,
         method: "GET",
@@ -117,7 +117,8 @@ export const courseApi = createApi({
         url:`/${courseId}?publish=${query}`,
         method:"PATCH"
 
-      })
+      }),
+      invalidatesTags: ["Refetch_Creator_Course"],
     })
   }),
 });
@@ -128,7 +129,7 @@ export const {
   useGetPublishedCourseQuery,
   useGetCreatorCoursesQuery,
   useEditCourseMutation,
-  useGetCourseyIdQuery,
+  useGetCourseByIdQuery,
   useCreateLectureMutation,
   useGetCourseLectureQuery,
   useEditLectureMutation,
